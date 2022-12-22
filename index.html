@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Art Gallery</title>
+</head>
+
+<style>
+    body {
+        background-image: url(img.webp);
+    }
+</style>
+
+<body>
+    <ol>
+        <div>
+            <li style="color:white"> Currently Available Art Pieces</li>
+            <form action="avail.php" method="post">
+                <input type="submit" value="Show" ">
+            </form>
+        </div>
+        <div>
+            <li style=" color:white">Procurement Details</li>
+                <form action=" transaction.php" method="post">
+                    <label for="name" style="color:white">Start Date:</label><br>
+                    <input type="date" id="start_date" name="start_date" required><br>
+                    <label for="name" style="color:white">End Date:</label><br>
+                    <input type="date" id="end_date" name="end_date" required><br>
+                    <input type="submit" value="Submit">
+                </form>
+        </div>
+        <div>
+            <li style="color:white">Sales in each Month</li>
+            <form action="sale_per_month.php" method="post">
+                <label for="name" style="color:white">Year:</label><br>
+                <input type="number" id="year" name="year" min="1900" max="9999" step="1" required><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div>
+            <li style="color:white">Sales for each Art Group</li>
+            <form action="sale_per_grp.php" method="post">
+                <label for="name" style="color:white">Year:</label><br>
+                <input type="number" id="year" name="year" min="1900" max="9999" step="1" required><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </ol>
+</body>
+
+</html>
